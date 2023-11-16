@@ -9,6 +9,7 @@ export class StatusProgressBarComponent {
   maxValue = 10;  // Valor máximo es 10
   statusBar = 5;  // Nuevo valor que reemplaza a currentValue
 
+
   get statusBarString() {
     return ((this.statusBar / this.maxValue) * 100).toFixed(0) + '%';
   }

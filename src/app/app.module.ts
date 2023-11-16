@@ -23,6 +23,7 @@ import { StatusProgressBarComponent } from './home/components/status-progress-ba
 import { WashingMachineComponent } from './home/components/washing-machine/washing-machine.component';
 import { HomeStartBannerComponent } from './home/components/home-start-banner/home-start-banner.component';
 import { ClickToiledComponent } from './home/components/click-toiled/click-toiled.component';
+import { FooterComponent } from './_components/footer/footer.component';
 
 @NgModule({
 
@@ -47,7 +48,8 @@ import { ClickToiledComponent } from './home/components/click-toiled/click-toile
         WashingMachineComponent,
         MoneyProgressBarComponent,
         HomeStartBannerComponent,
-        ClickToiledComponent
+        ClickToiledComponent,
+        FooterComponent
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
