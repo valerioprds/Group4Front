@@ -18,12 +18,13 @@ import { WaterProgressBarComponent } from './home/components/water-progress-bar/
 import { MoneyProgressBarComponent } from './home/components/money-progress-bar/money-progress-bar.component';
 
 import { NavbarComponent } from './_components/navbar/navbar.component';
-import { GameShowerComponent } from './home/components/games/game-shower/game-shower.component';
+
 import { StatusProgressBarComponent } from './home/components/status-progress-bar/status-progress-bar.component';
 import { WashingMachineComponent } from './home/components/washing-machine/washing-machine.component';
 import { HomeStartBannerComponent } from './home/components/home-start-banner/home-start-banner.component';
 import { ClickToiledComponent } from './home/components/click-toiled/click-toiled.component';
 import { FooterComponent } from './_components/footer/footer.component';
+import { GameShowerComponent } from './home/components/game-shower/game-shower.component';
 
 @NgModule({
 

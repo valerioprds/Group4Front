@@ -1,7 +1,46 @@
-.button-container {
+.card {
+  color: black;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  text-align: center;
+  max-width: 600px;
+  margin: auto;
   padding: 20px;
+  width: 250px;
+  height: 420px;
 }
+
+.image-container img {
+  max-width: 150px;
+  height: auto;
+  max-height: 100%;
+  margin: auto;
+}
+
 .litros-text {
   font-size: 1.2rem;
   color: #555;
+}
+
+h3.card-title {
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+}
+
+.btn-counter, .btn {
+  background-color: #FF6B6B;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  color: black;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-counter:hover, .btn:hover {
+  background-color: #FF4B4B;
 }

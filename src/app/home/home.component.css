@@ -1,0 +1,12 @@
+.card-fixed-size {
+  height: auto; /* Altura fija */
+  width: auto; /* Ancho fijo */
+}
+
+/* Asegúrate de que las tarjetas sigan siendo responsivas en pantallas más pequeñas */
+@media (max-width: 767px) {
+  .card-fixed-size {
+    width: auto; /* Permite que las tarjetas se ajusten al contenedor en pantallas pequeñas */
+    margin: 0 15px; /* Agrega un poco de margen a los lados */
+  }
+}

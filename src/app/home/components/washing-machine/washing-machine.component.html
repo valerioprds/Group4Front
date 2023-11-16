@@ -1,9 +1,20 @@
-<div class="container text-center mt-5">
-  <div class="button-container">
-    <button type="button" class="btn btn-lg" [ngClass]="{'btn-primary': botonActivo, 'btn-secondary': !botonActivo}" (click)="toggleBoton()">
-      <i [class]="botonActivo ? 'fa-solid fa-toggle-on' : 'fa-solid fa-toggle-off'"></i>
-      {{ botonActivo ? ' Activo' : ' Inactivo' }}
-    </button>
+<div class="container text-center">
+  <div class="card">
+    <div class="card-body">
+      <!-- Título para la imagen -->
+      <h3 class="mb-3 card-title">¿Has usado la lavadora hoy?</h3>
+
+      <!-- Contenedor de la imagen con tamaño fijo -->
+      <div class="image-container mb-4">
+        <img src="assets/lavadora.png" alt="Lavadora">
+      </div>
+
+      <div class="button-container mb-3">
+        <button type="button" class="btn btn-lg btn-counter" [ngClass]="{'btn-primary': botonActivo, 'btn-secondary': !botonActivo}" (click)="toggleBoton()">
+          <i [class]="botonActivo ? 'fa-solid fa-toggle-on' : 'fa-solid fa-toggle-off'"></i>
+          {{ botonActivo ? ' Activo' : ' Inactivo' }}
+        </button>
+      </div>
+    </div>
   </div>
-  <p class="litros-text">Litros: {{ litros }}</p>
 </div>

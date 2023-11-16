@@ -1,0 +1,38 @@
+.timer-card {
+  color: black;
+  border-radius: 25px;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.75);
+  width: 250px;
+  height: 420px;
+}
+
+.timer-icon {
+  max-width: 80px; /* Tamaño del icono */
+  height: auto;
+}
+
+.water-used, .timer {
+  font-weight: 600;
+}
+.water-used{
+  color: black;
+}
+
+.start-btn, .stop-btn {
+  padding: 10px 25px;
+  border-radius: 50px; /* Botones con bordes redondeados para una apariencia más moderna */
+  transition: all 0.3s ease;
+}
+
+.start-btn:hover, .stop-btn:hover {
+  transform: scale(1.05); /* Un efecto de zoom sutil al pasar el mouse sobre los botones */
+  box-shadow: 0 8px 15px rgba(0,0,0,0.5);
+}
+
+/* Asegúrate de que los botones ocupen todo el ancho en dispositivos móviles */
+@media (max-width: 576px) {
+  .start-btn, .stop-btn {
+    width: 100%;
+    padding: 10px 0;
+  }
+}
