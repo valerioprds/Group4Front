@@ -30,7 +30,7 @@ export class ClickToiledComponent {
 
   onToiletClick() {
     let waterConsumption: number = this.calculateWaterUsage();
-    let gameData: GameData = this.apiService.createApiJsonObject("bathroom", waterConsumption);
+    let gameData: GameData = this.apiService.createApiJsonObject(2, waterConsumption);
 
     let apiResp: PostApiResp;
     this.apiService.sendGameData(gameData)
@@ -43,7 +43,7 @@ export class ClickToiledComponent {
       )
       .subscribe((resp) => apiResp = resp);
 
-      this.apiService.getUser().subscribe((resp) => console.log('get test', resp))
+    
   }
 
 }
