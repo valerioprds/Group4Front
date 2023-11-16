@@ -11,6 +11,7 @@
     border-radius: 8px;
     cursor: pointer;
   }
+  h2{ font-size: 25px;}
 
   .card::before {
     content: '';
