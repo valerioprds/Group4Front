@@ -20,6 +20,7 @@ import { MoneyProgressBarComponent } from './home/components/money-progress-bar/
 import { NavbarComponent } from './_components/navbar/navbar.component';
 import { GameShowerComponent } from './home/components/games/game-shower/game-shower.component';
 import { StatusProgressBarComponent } from './home/components/status-progress-bar/status-progress-bar.component';
+import { WashingMachineComponent } from './home/components/washing-machine/washing-machine.component';
 
 
 @NgModule({
@@ -37,11 +38,10 @@ import { StatusProgressBarComponent } from './home/components/status-progress-ba
         AlertComponent,
         WaterProgressBarComponent,
         MoneyProgressBarComponent,
-
-
         NavbarComponent,
-        GameShowerComponent
-        StatusProgressBarComponent
+        GameShowerComponent,
+        StatusProgressBarComponent,
+        WashingMachineComponent
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

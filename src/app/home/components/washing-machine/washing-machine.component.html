@@ -1,0 +1,9 @@
+<div class="container text-center mt-5">
+  <div class="button-container">
+    <button type="button" class="btn btn-lg" [ngClass]="{'btn-primary': botonActivo, 'btn-secondary': !botonActivo}" (click)="toggleBoton()">
+      <i [class]="botonActivo ? 'fa-solid fa-toggle-on' : 'fa-solid fa-toggle-off'"></i>
+      {{ botonActivo ? ' Activo' : ' Inactivo' }}
+    </button>
+  </div>
+  <p class="litros-text">Litros: {{ litros }}</p>
+</div>

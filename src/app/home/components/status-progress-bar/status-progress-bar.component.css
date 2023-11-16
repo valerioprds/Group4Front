@@ -8,9 +8,9 @@ body {
   height: 78px;
   border-radius: 10px;
   text-align: center;
-  -moz-box-shadow: inset 0 0 10px #ccc;
-  -webkit-box-shadow: inset 0 0 10px #ccc;
   box-shadow: inset 0 0 10px #ccc;
+  background: #ddd;
+  position: relative; /* Importante para posicionar los textos */
 }
 
 .progress-bar {
@@ -18,160 +18,48 @@ body {
   height: 78px;
   border-radius: 10px;
   float: left;
-  width: 50%;
-  /* fallback */
-  background-color: #1c314a;
-
-  /* Safari 4-5, Chrome 1-9 */
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1c314a), to(#27425f));
-
-  /* Safari 5.1, Chrome 10+ */
-  background: -webkit-linear-gradient(top, #1c314a, #27425f);
-
-  /* Firefox 3.6+ */
-  background: -moz-linear-gradient(top, #1c314a, #27425f);
-
-  /* IE 10 */
-  background: -ms-linear-gradient(top, #1c314a, #27425f);
-
-  /* Opera 11.10+ */
-  background: -o-linear-gradient(top, #1c314a, #27425f);
+  background: linear-gradient(to right, #4caf50, #ffeb3b, #f44336);
 }
 
-.progress-bg h3.goal,
+/* Estilo para el texto 'Máximo deberías gastar' */
 .progress-bg h3.raised {
   font-family: Arial, sans-serif;
-  font-size: 2em;
+  font-size: 1.5em; /* Ajuste de tamaño para evitar superposición */
   font-weight: 600;
-  line-height: 78px;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  display: inline;
-}
-
-
-.progress-bg h3.raised {
+  position: absolute;
+  left: 10px; /* Posicionado a la izquierda */
+  top: 10px; /* Ajuste vertical */
   color: #fff;
-  margin: 14px 25px 0 50px;
-  padding: 0 25px 0 0;
+  text-shadow: 1px 1px 2px #000;
+  z-index: 2; /* Asegura que esté sobre la barra */
 }
 
+/* Estilo para el texto 'Litros gastados' */
 .progress-bg h3.goal {
-  color: #b2b2b2;
-  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 1.5em; /* Ajuste de tamaño para evitar superposición */
+  font-weight: 600;
+  position: absolute;
+  right: 10px; /* Posicionado a la derecha */
+  bottom: 10px; /* Ajuste vertical */
+  color: #fff;
+  text-shadow: 1px 1px 2px #000;
 }
 
-body .progress-bg h3.raised {
-  -webkit-animation: fadein 4s;
-  /* Safari and Chrome */
-  -moz-animation: fadein 4s;
-  /* Firefox */
-  -ms-animation: fadein 4s;
-  /* Internet Explorer */
-  -o-animation: fadein 4s;
-  /* Opera */
-  animation: fadein 4s;
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-@keyframes fadein {
-  from {
-      opacity: 0;
-  }
-
-  to {
-      opacity: 1;
-  }
+body .progress-bg h3 {
+  animation: fadeIn 4s;
 }
 
-/* Firefox */
-@-moz-keyframes fadein {
-  from {
-      opacity: 0;
-  }
-
-  to {
-      opacity: 1;
-  }
+@keyframes expandBar {
+  from { width: 0%; }
+  to { width: var(--progress-width); }
 }
 
-/* Safari and Chrome */
-@-webkit-keyframes fadein {
-  from {
-      opacity: 0;
-  }
-
-  to {
-      opacity: 1;
-  }
-}
-
-/* Internet Explorer */
-@-ms-keyframes fadein {
-  from {
-      opacity: 0;
-  }
-
-  to {
-      opacity: 1;
-  }
-}
-
-​
-
-/* Opera */
-
-
-​ .progress-bg h3.goal {
-  float: right;
-  display: inline;
-  padding: 0 25px 0 0;
-  text-align: center;
-}
-
-body .progress-bg div {
-  -webkit-animation: progress-bar 2s ease forwards;
-  -moz-animation: progress-bar 2s ease forwards;
-  -o-animation: progress-bar 2s ease forwards;
-  animation: progress-bar 2s ease forwards;
-}
-
-@-webkit-keyframes progress-bar {
-  from {
-      width: 0%;
-  }
-
-  to {
-      width: 50%;
-  }
-}
-
-@-moz-keyframes progress-bar {
-  from {
-      width: 0%;
-  }
-
-  to {
-      width: 50%;
-  }
-}
-
-@-o-keyframes progress-bar {
-  from {
-      width: 0%;
-  }
-
-  to {
-      width: 50%;
-  }
-}
-
-@keyframes progress-bar {
-  from {
-      width: 0%;
-  }
-
-  to {
-      width: 50%;
-  }
+body .progress-bg .progress-bar {
+  animation: expandBar 2s ease forwards;
 }
