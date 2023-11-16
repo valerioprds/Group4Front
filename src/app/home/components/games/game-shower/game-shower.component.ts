@@ -61,7 +61,7 @@ export class GameShowerComponent implements OnDestroy {
 
   onStopTimer() {
     
-    let gameData: GameData = this.apiService.createApiJsonObject("shower", this.waterUsed);
+    let gameData: GameData = this.apiService.createApiJsonObject(1, this.waterUsed);
 
     let apiResp: PostApiResp;
     this.apiService.sendGameData(gameData)
