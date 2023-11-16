@@ -21,35 +21,33 @@ import { NavbarComponent } from './_components/navbar/navbar.component';
 import { GameShowerComponent } from './home/components/games/game-shower/game-shower.component';
 import { StatusProgressBarComponent } from './home/components/status-progress-bar/status-progress-bar.component';
 
-
 @NgModule({
-    imports: [
-        BrowserModule,
-        ReactiveFormsModule,
-        HttpClientModule,
-        AppRoutingModule
-    ],
-    declarations: [
-        AppComponent,
-        HomeComponent,
-        LoginComponent,
-        RegisterComponent,
-        AlertComponent,
-        WaterProgressBarComponent,
-        MoneyProgressBarComponent,
+  imports: [
+    BrowserModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    AppRoutingModule,
+  ],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    LoginComponent,
+    RegisterComponent,
+    AlertComponent,
+    WaterProgressBarComponent,
+    MoneyProgressBarComponent,
 
+    NavbarComponent,
+    GameShowerComponent,
+    StatusProgressBarComponent,
+  ],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
 
-        NavbarComponent,
-        GameShowerComponent
-        StatusProgressBarComponent
-    ],
-    providers: [
-        { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
-        { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
-
-        // provider used to create fake backend
-        fakeBackendProvider
-    ],
-    bootstrap: [AppComponent]
+    // provider used to create fake backend
+    fakeBackendProvider,
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
