@@ -22,6 +22,7 @@ import { GameShowerComponent } from './home/components/games/game-shower/game-sh
 import { StatusProgressBarComponent } from './home/components/status-progress-bar/status-progress-bar.component';
 import { WashingMachineComponent } from './home/components/washing-machine/washing-machine.component';
 import { HomeStartBannerComponent } from './home/components/home-start-banner/home-start-banner.component';
+import { ClickToiledComponent } from './home/components/click-toiled/click-toiled.component';
 
 @NgModule({
 
@@ -45,7 +46,8 @@ import { HomeStartBannerComponent } from './home/components/home-start-banner/ho
         StatusProgressBarComponent,
         WashingMachineComponent,
         MoneyProgressBarComponent,
-        HomeStartBannerComponent
+        HomeStartBannerComponent,
+        ClickToiledComponent
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
