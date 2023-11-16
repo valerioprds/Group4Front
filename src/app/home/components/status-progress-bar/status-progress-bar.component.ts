@@ -6,10 +6,15 @@ import { ApiServiceService } from '@app/_services/api-service.service';
   templateUrl: './status-progress-bar.component.html',
   styleUrls: ['./status-progress-bar.component.css']
 })
+
 export class StatusProgressBarComponent implements OnInit {
   maxValue = 10;  // Valor máximo ahora es 10
   statusBar = 5;  // Nuevo valor que reemplaza a currentValue
-  statusBarString = '85%'
+
+
+  get statusBarString() {
+    return ((this.statusBar / this.maxValue) * 100).toFixed(0) + '%';
+  }
 
   constructor(
     private apiService: ApiServiceService,
