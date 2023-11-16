@@ -1,6 +1,6 @@
-<div class="timer-container">
-  <h2 class="text-black">Water used: {{waterUsed}} </h2>
-  <h2 [style.color]="timerColor">Timer: {{ time }}</h2>
+<div class="timer-container" style="background-color: #444;">
+  <h2 class="text-white">Water used: {{waterUsed}} </h2>
+  <h2 [style.color]="timerColor" class="text-white">Timer: {{ time }}</h2>
   <div class="button-group">
     <button *ngIf="!isRunning" class="btn btn-success" (click)="startTimer()">
       <i class="fa-solid fa-play"></i>
