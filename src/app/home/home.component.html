@@ -1,82 +1,65 @@
 <app-navbar></app-navbar>
 
+<div class="container my-4">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="page-content">
 
-<div class="container">
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="page-content">
-                <div class="row">
+        <!-- Banner Section -->
+        <div class="row mb-4">
+          <div class="col-12">
+            <app-home-start-banner></app-home-start-banner>
+          </div>
+        </div>
 
-
-                    <div class="col-lg-12">
-                        <div class="main-profile ">
-                            <app-home-start-banner></app-home-start-banner>
-
-                            <div class="d-flex justify-content-center align-items-center w-100">
-                                <div class="mt-5 border border-black w-75 ">
-                                    <div class=" d-flex flex-wrap justify-content-evenly align-items-center">
-                                        <div class="mt-3 mb-3 shadow">
-                                            <app-water-progress-bar></app-water-progress-bar>
-                                        </div>
-                                        <div class="mt-3 mb-3">
-                                            <app-money-progress-bar></app-money-progress-bar>
-                                        </div>
-                                    </div>
-
-                                    <div class=" d-flex justify-content-evenly align-items-center">
-                                        <app-game-shower></app-game-shower>
-                                        <p> game 1</p>
-                                        <p> game 2</p>
-                                        <app-washing-machine></app-washing-machine>
-                                    </div>
-
-                                    <div class="m-3">
-                                        <app-status-progress-bar></app-status-progress-bar>
-                                    </div>
-
-                                </div>
-                            </div>
-
-
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="clips">
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <div class="heading-section">
-                                                    <h4><em>Gastos de Agua</em></h4>
-                                                </div>
-                                            </div>
-
-
-                                            <!--CARD en SI-->
-                                            <div class="carta col-lg-3 col-sm-6 mb-4">
-                                              <div class="card h-100 shadow-sm">
-                                                  <div class="card-img-top d-flex justify-content-center align-items-center" style="height:150px; background-color: #EFEFEF;">
-                                                      <img src="../../assets/shower-icon.png" alt="Shower" width="100px">
-                                                  </div>
-                                                  <div class="card-body">
-                                                      <h5 class="card-title text-center">Shower</h5>
-                                                      <div class="text-center">
-                                                          <app-game-shower></app-game-shower>
-                                                      </div>
-                                                      <p class="card-text text-center mt-2">
-                                                          <i class="fa fa-eye"></i> Timer
-                                                      </p>
-                                                  </div>
-                                              </div>
-                                          </div>
-
-
-
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- ***** Banner End ***** -->
-                        </div>
-                    </div>
-                </div>
+        <!-- Progress Bars Section -->
+        <div class="row mb-4">
+          <div class="col-lg-6 col-md-6 mb-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">Progreso del Agua</h5>
+                <app-water-progress-bar></app-water-progress-bar>
+              </div>
             </div>
+          </div>
+          <div class="col-lg-6 col-md-6 mb-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">Progreso Financiero</h5>
+                <app-money-progress-bar></app-money-progress-bar>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Games and Washing Machine Section -->
+        <div class="row mb-4">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">Juego de la Ducha</h5>
+                <app-game-shower></app-game-shower>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">Lavadora</h5>
+                <app-washing-machine></app-washing-machine>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">Estado General</h5>
+                <app-status-progress-bar></app-status-progress-bar>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
