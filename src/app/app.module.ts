@@ -17,6 +17,7 @@ import { RegisterComponent } from './account/register/register.component';
 import { WaterProgressBarComponent } from './home/components/water-progress-bar/water-progress-bar.component';
 import { MoneyProgressBarComponent } from './home/components/money-progress-bar/money-progress-bar.component';
 import { NavbarComponent } from './_components/navbar/navbar.component';
+import { GameShowerComponent } from './home/components/games/game-shower/game-shower.component';
 
 @NgModule({
     imports: [
@@ -33,7 +34,8 @@ import { NavbarComponent } from './_components/navbar/navbar.component';
         AlertComponent,
         WaterProgressBarComponent,
         MoneyProgressBarComponent,
-        NavbarComponent
+        NavbarComponent,
+        GameShowerComponent
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
