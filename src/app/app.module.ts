@@ -14,6 +14,8 @@ import { HomeComponent } from './home';
 //import { LoginComponent, RegisterComponent } from './account';
 import { AlertComponent } from './_components/alert/alert.component';
 import { RegisterComponent } from './account/register/register.component';
+import { WaterProgressBarComponent } from './home/components/water-progress-bar/water-progress-bar.component';
+import { MoneyProgressBarComponent } from './home/components/money-progress-bar/money-progress-bar.component';
 
 @NgModule({
     imports: [
@@ -27,7 +29,9 @@ import { RegisterComponent } from './account/register/register.component';
         HomeComponent,
         LoginComponent,
         RegisterComponent,
-        AlertComponent
+        AlertComponent,
+        WaterProgressBarComponent,
+        MoneyProgressBarComponent
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
