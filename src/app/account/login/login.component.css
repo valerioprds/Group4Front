@@ -3,7 +3,7 @@
   max-width: 500px;
   margin: 50px auto;
   padding: 20px;
-  background-color: #fff;
+  background-color: #000000; /* Black background */
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
@@ -14,6 +14,13 @@
   border-radius: 5px;
   padding: 10px;
   margin-bottom: 20px;
+  background-color: #ffffff; /* White background for input fields */
+  color: #333333; /* Dark text for readability */
+}
+
+.login-form .form-control:focus {
+  border-color: pink;
+  box-shadow: 0 0 5px pink; /* Pink glow effect on focus */
 }
 
 .login-form .input-group-text {
@@ -38,5 +45,5 @@
 }
 
 /* Responsive Design para Login */
-
+/* Add your responsive CSS here if needed */
 
