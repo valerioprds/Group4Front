@@ -1,0 +1,42 @@
+/* Contenedor del Formulario de Login */
+.login-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Estilos de los Campos de Formulario de Login */
+.login-form .form-control {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.login-form .input-group-text {
+  background-color: #eee;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Botón de Inicio de Sesión */
+.login-form button[type="submit"] {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-form button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+/* Responsive Design para Login */
+
+
