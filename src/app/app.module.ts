@@ -30,7 +30,8 @@ import { ClickToiledComponent } from './home/components/click-toiled/click-toile
         BrowserModule,
         ReactiveFormsModule,
         HttpClientModule,
-        AppRoutingModule
+        AppRoutingModule,
+        HttpClientModule,
     ],
     declarations: [
         AppComponent,
@@ -54,6 +55,9 @@ import { ClickToiledComponent } from './home/components/click-toiled/click-toile
 
         // provider used to create fake backend
         fakeBackendProvider
+    ],
+    exports: [
+        HttpClientModule,
     ],
     bootstrap: [AppComponent]
 

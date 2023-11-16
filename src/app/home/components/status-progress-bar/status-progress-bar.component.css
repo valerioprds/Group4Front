@@ -1,15 +1,16 @@
 body {
   padding: 50px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .progress-bg {
   margin: 0 auto;
-  width: 65%;
+  width: 100%;
   height: 78px;
   border-radius: 10px;
   text-align: center;
   box-shadow: inset 0 0 10px #ccc;
-  background: #ddd;
+  background: rgb(86, 89, 90);
   position: relative; /* Importante para posicionar los textos */
 }
 
@@ -18,7 +19,7 @@ body {
   height: 78px;
   border-radius: 10px;
   float: left;
-  background: linear-gradient(to right, #4caf50, #ffeb3b, #f44336);
+  background: linear-gradient(to right, #6b4254, #e75e8d);
 }
 
 /* Estilo para el texto 'Máximo deberías gastar' */
