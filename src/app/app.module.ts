@@ -41,7 +41,8 @@ import { WashingMachineComponent } from './home/components/washing-machine/washi
         NavbarComponent,
         GameShowerComponent,
         StatusProgressBarComponent,
-        WashingMachineComponent
+        WashingMachineComponent,
+        MoneyProgressBarComponent
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
