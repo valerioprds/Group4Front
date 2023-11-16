@@ -1,3 +1,4 @@
+import { LoginComponent } from './account/login/login.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -10,8 +11,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home';
-import { LoginComponent, RegisterComponent } from './account';
+//import { LoginComponent, RegisterComponent } from './account';
 import { AlertComponent } from './_components/alert/alert.component';
+import { RegisterComponent } from './account/register/register.component';
 
 @NgModule({
     imports: [
