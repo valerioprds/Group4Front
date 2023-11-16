@@ -104,4 +104,39 @@
     opacity: 0.9;
   }
 
- 
+  @keyframes rain {
+    to {
+        transform: translateY(100%);
+    }
+}
+
+.timer-container.running::before {
+  content: '';
+  position: absolute;
+  top: -100%; /* Start above the element */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.2) 1px,
+      transparent 1px,
+      transparent 5px
+  );
+  animation: rain 0.5s linear infinite;
+}
+
+.timer-container {
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin-top: 20px;
+  /* ... other styles ... */
+}
+
+
+
