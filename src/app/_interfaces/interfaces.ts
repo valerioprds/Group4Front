@@ -14,6 +14,6 @@ export interface PostApiResp{
 export interface GetApiResp{
     user: string,
     totalConsumption: number,
-    average_consumption: number,
+    averageConsumption: number,
 }
 
