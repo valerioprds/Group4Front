@@ -20,34 +20,37 @@ import { MoneyProgressBarComponent } from './home/components/money-progress-bar/
 import { NavbarComponent } from './_components/navbar/navbar.component';
 import { GameShowerComponent } from './home/components/games/game-shower/game-shower.component';
 import { StatusProgressBarComponent } from './home/components/status-progress-bar/status-progress-bar.component';
+import { WashingMachineComponent } from './home/components/washing-machine/washing-machine.component';
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    AppRoutingModule,
-  ],
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    LoginComponent,
-    RegisterComponent,
-    AlertComponent,
-    WaterProgressBarComponent,
-    MoneyProgressBarComponent,
 
-    NavbarComponent,
-    GameShowerComponent,
-    StatusProgressBarComponent,
-  ],
-  providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
-    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+    imports: [
+        BrowserModule,
+        ReactiveFormsModule,
+        HttpClientModule,
+        AppRoutingModule
+    ],
+    declarations: [
+        AppComponent,
+        HomeComponent,
+        LoginComponent,
+        RegisterComponent,
+        AlertComponent,
+        WaterProgressBarComponent,
+        MoneyProgressBarComponent,
+        NavbarComponent,
+        GameShowerComponent,
+        StatusProgressBarComponent,
+        WashingMachineComponent
+    ],
+    providers: [
+        { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+        { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
 
-    // provider used to create fake backend
-    fakeBackendProvider,
-  ],
-  bootstrap: [AppComponent],
+        // provider used to create fake backend
+        fakeBackendProvider
+    ],
+    bootstrap: [AppComponent]
+
 })
 export class AppModule {}

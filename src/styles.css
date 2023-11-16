@@ -1,6 +1,5 @@
-@import "./../node_modules/@fortawesome/fontawesome-free/";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900");
-
+@import '@fortawesome/fontawesome-free/css/all.min.css';
 /* 
 ---------------------------------------------
 reset
@@ -1828,3 +1827,4 @@ body {
         width: 16%;
     }
 }
+
