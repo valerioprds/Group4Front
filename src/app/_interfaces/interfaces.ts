@@ -1,5 +1,5 @@
 export interface GameData{
-    activity: number,
+    activity: string,
     time: string,
     user: number,
     name: string,
