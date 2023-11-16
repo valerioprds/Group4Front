@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class StatusProgressBarComponent {
   maxValue = 10;  // Valor máximo ahora es 10
   statusBar = 5;  // Nuevo valor que reemplaza a currentValue
+  statusBarString = '85%'
 
   get progressWidth() {
     return (this.statusBar / this.maxValue) * 100 + '%';
