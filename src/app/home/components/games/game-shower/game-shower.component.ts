@@ -6,7 +6,7 @@ import { finalize, interval, Subscription } from 'rxjs';
 @Component({
   selector: 'app-game-shower',
   templateUrl: './game-shower.component.html',
-  styleUrls: ['./game-shower.component.css']
+  styleUrls: ['./game-shower.component.css'],
 })
 export class GameShowerComponent implements OnDestroy {
   private timeInSeconds: number = 0;
@@ -56,7 +56,7 @@ export class GameShowerComponent implements OnDestroy {
 
   private updateWaterUsage() {
     const rawWaterUsed = (this.timeInSeconds / 60) * 7.5;
-    this.waterUsed = Number(rawWaterUsed.toFixed(2));  // Calcula el agua usada en litros
+    this.waterUsed = Number(rawWaterUsed.toFixed(2)); // Calcula el agua usada en litros
   }
 
   onStopTimer() {

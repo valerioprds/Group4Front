@@ -3,12 +3,9 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-washing-machine',
   templateUrl: './washing-machine.component.html',
-  styleUrls: ['./washing-machine.component.css']
+  styleUrls: ['./washing-machine.component.css'],
 })
-export class WashingMachineComponent  {
-
-
-
+export class WashingMachineComponent {
   litros: number = 0;
   botonActivo: boolean = false;
 
@@ -18,5 +15,4 @@ export class WashingMachineComponent  {
       this.litros += 1;
     }
   }
-
 }

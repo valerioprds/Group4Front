@@ -1,7 +1,4 @@
 import { Component } from '@angular/core';
-import { GameData, PostApiResp } from '@app/_interfaces/interfaces';
-import { ApiServiceService } from '@app/_services/api-service.service';
-import { finalize } from 'rxjs';
 
 @Component({
   selector: 'app-click-toiled',
@@ -13,19 +10,13 @@ export class ClickToiledComponent {
   flushCount = 0;
   waterUsedPerFlush = 10; // Litros de agua por descarga
 
-  constructor(
-    public apiService: ApiServiceService,
-  ) {
-
-  }
-
   incrementCount(): void {
     this.flushCount++;
-    this.onToiletClick();
   }
 
   calculateWaterUsage(): number {
     return this.flushCount * this.waterUsedPerFlush;
+
   }
 
   onToiletClick() {
@@ -45,5 +36,6 @@ export class ClickToiledComponent {
 
     
   }
+
 
 }
