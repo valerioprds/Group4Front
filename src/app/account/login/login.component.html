@@ -1,9 +1,9 @@
 <div class="container col-md-6 offset-md-3 mt-5">
   <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
-  <div *ngIf="success" class="alert alert-success">{{success}}</div>
-  <div class="card">
+  <div *ngIf="success" class="alert alert-success">{{ success }}</div>
+  <div class="card" style="background-color: rgb(40, 38, 38) ; color: rgb(241, 130, 149);">
     <h4 class="card-header">Login</h4>
-    <div class="card-body">
+    <div class="card-body" >
       <form [formGroup]="form" (ngSubmit)="onSubmit()">
         <div class="mb-3">
           <label class="form-label">Username</label>
@@ -30,14 +30,14 @@
           </div>
         </div>
         <div>
-          <button [disabled]="loading" class="btn btn-primary">
+          <button style="background-color: rgb(241, 130, 149) ;" [disabled]="loading" class="btn btn-primary">
             <span
               *ngIf="loading"
-              class="spinner-border spinner-border-sm me-1"
+              class="spinner-border spinner-border-sm me-5"
             ></span>
             Login
           </button>
-          <a routerLink="../register" class="btn btn-link">Register</a>
+          <a style="color: rgb(241, 130, 149) ; "routerLink="../register" class="btn btn-link">Register</a>
         </div>
       </form>
     </div>
