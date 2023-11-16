@@ -16,6 +16,7 @@ import { AlertComponent } from './_components/alert/alert.component';
 import { RegisterComponent } from './account/register/register.component';
 import { WaterProgressBarComponent } from './home/components/water-progress-bar/water-progress-bar.component';
 import { MoneyProgressBarComponent } from './home/components/money-progress-bar/money-progress-bar.component';
+import { NavbarComponent } from './_components/navbar/navbar.component';
 
 @NgModule({
     imports: [
@@ -31,7 +32,8 @@ import { MoneyProgressBarComponent } from './home/components/money-progress-bar/
         RegisterComponent,
         AlertComponent,
         WaterProgressBarComponent,
-        MoneyProgressBarComponent
+        MoneyProgressBarComponent,
+        NavbarComponent
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
