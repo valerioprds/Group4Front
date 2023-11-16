@@ -21,6 +21,7 @@ import { NavbarComponent } from './_components/navbar/navbar.component';
 import { GameShowerComponent } from './home/components/games/game-shower/game-shower.component';
 import { StatusProgressBarComponent } from './home/components/status-progress-bar/status-progress-bar.component';
 import { WashingMachineComponent } from './home/components/washing-machine/washing-machine.component';
+import { HomeStartBannerComponent } from './home/components/home-start-banner/home-start-banner.component';
 
 @NgModule({
 
@@ -42,7 +43,8 @@ import { WashingMachineComponent } from './home/components/washing-machine/washi
         GameShowerComponent,
         StatusProgressBarComponent,
         WashingMachineComponent,
-        MoneyProgressBarComponent
+        MoneyProgressBarComponent,
+        HomeStartBannerComponent
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
