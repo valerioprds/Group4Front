@@ -10,6 +10,7 @@ export class ApiServiceService {
 
   baseUrl: string = 'https://backend-agua.azurewebsites.net/api/v1/summary/1';
   userTotalWaterUsage = new BehaviorSubject<number>(0); // setting initial value
+  totalWaterUsage: number = 0;
   constructor(
     private http: HttpClient,
   ) { }
@@ -17,7 +18,7 @@ export class ApiServiceService {
 
   gameInfoObject: GameData = {
     activity: '',
-    time: "string",
+    time: Date(),
     user: 1,
     name: "Marco",
     consumption: 0,
@@ -26,12 +27,15 @@ export class ApiServiceService {
   createApiJsonObject(activity: string, consumption:number ): GameData {
     this.gameInfoObject.activity = activity;
     this.gameInfoObject.consumption = consumption;
+    this.gameInfoObject.time= Date();
 
     return this.gameInfoObject;
   }
 
   sendGameData(gameData: GameData): Observable<PostApiResp>{
-    return this.http.post<PostApiResp>(`${this.baseUrl}`, gameData );
+    return this.http.post<PostApiResp>(`${this.baseUrl}`, gameData, {
+      headers:{  'Content-Type': 'application/json'}
+    });
   }
 
   getUser(): Observable<GetApiResp>{
@@ -40,7 +44,7 @@ export class ApiServiceService {
 
   getUserData(){
     this.getUser()
-    .subscribe( (resp) => this.userTotalWaterUsage.next(resp.average_consumption));
+    .subscribe( (resp) => { this.userTotalWaterUsage.next(resp.averageConsumption), this.totalWaterUsage = resp.totalConsumption});
   }
 }
 

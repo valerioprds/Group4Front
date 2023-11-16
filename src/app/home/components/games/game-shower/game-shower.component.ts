@@ -1,5 +1,7 @@
 import { Component, OnDestroy } from '@angular/core';
-import { interval, Subscription } from 'rxjs';
+import { GameData, PostApiResp } from '@app/_interfaces/interfaces';
+import { ApiServiceService } from '@app/_services/api-service.service';
+import { finalize, interval, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-game-shower',
@@ -12,6 +14,12 @@ export class GameShowerComponent implements OnDestroy {
   private timerSubscription?: Subscription;
   waterUsed: number = 0; // Variable para almacenar los litros de agua gastados
 
+
+  constructor(
+    public apiService: ApiServiceService,
+  ){
+
+  }
   get time(): string {
     const minutes = Math.floor(this.timeInSeconds / 60);
     const seconds = this.timeInSeconds % 60;
@@ -35,6 +43,7 @@ export class GameShowerComponent implements OnDestroy {
     this.timerSubscription = undefined;
     // No reseteamos el agua usada aquí
     this.timeInSeconds = 0; // Resetea sólo el tiempo
+    this.onStopTimer();
   }
 
   ngOnDestroy() {
@@ -49,4 +58,21 @@ export class GameShowerComponent implements OnDestroy {
     const rawWaterUsed = (this.timeInSeconds / 60) * 7.5;
     this.waterUsed = Number(rawWaterUsed.toFixed(2)); // Calcula el agua usada en litros
   }
+
+  onStopTimer() {
+    
+    let gameData: GameData = this.apiService.createApiJsonObject("shower", this.waterUsed);
+
+    let apiResp: PostApiResp;
+    this.apiService.sendGameData(gameData)
+      .pipe(
+        finalize(() => {
+          console.log(apiResp)
+          this.apiService.getUserData();
+        }
+        )
+      )
+      .subscribe((resp) => apiResp = resp);
+  }
+
 }

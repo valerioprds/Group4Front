@@ -20,9 +20,7 @@ export class ClickToiledComponent {
   }
 
   incrementCount(): void {
-    console.log('hola')
     this.flushCount++;
-   
     this.onToiletClick();
   }
 
@@ -39,11 +37,13 @@ export class ClickToiledComponent {
       .pipe(
         finalize(() => {
           console.log(apiResp)
-          this.apiService.getUserData()
+          this.apiService.getUserData();
         }
         )
       )
       .subscribe((resp) => apiResp = resp);
+
+      this.apiService.getUser().subscribe((resp) => console.log('get test', resp))
   }
 
 }
