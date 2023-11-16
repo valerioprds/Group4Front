@@ -1,12 +1,21 @@
-<div class="timer-container" style="background-color: #444;">
-  <h2 class="text-white">Water used: {{waterUsed}} </h2>
-  <h2 [style.color]="timerColor" class="text-white">Timer: {{ time }}</h2>
-  <div class="button-group">
-    <button *ngIf="!isRunning" class="btn btn-success" (click)="startTimer()">
-      <i class="fa-solid fa-play"></i>
-    </button>
-    <button *ngIf="isRunning" class="btn btn-danger" (click)="stopTimer()">
-      <i class="fa-solid fa-stop"></i>
-    </button>
-  </div>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card timer-card shadow-lg">
+        <div class="card-body text-center">
+          <img src="assets/ducha.png" alt="Icono de ducha" class="timer-icon mb-4">
+          <h2 class="water-used  mb-2">Water used: {{ waterUsed }} Litros</h2>
+          <h2 class="timer display-6 mb-4" [style.color]="timerColor">Timer: {{ time }}</h2>
+          <div class="button-group">
+            <button *ngIf="!isRunning" class="btn start-btn btn-lg btn-success mb-2" (click)="startTimer()">
+              <i class="fa-solid fa-play"></i> Start
+            </button>
+            <button *ngIf="isRunning" class="btn stop-btn btn-lg btn-danger mb-2" (click)="stopTimer()">
+              <i class="fa-solid fa-stop"></i> Stop
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
