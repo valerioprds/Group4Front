@@ -29,7 +29,8 @@ import { HomeStartBannerComponent } from './home/components/home-start-banner/ho
         BrowserModule,
         ReactiveFormsModule,
         HttpClientModule,
-        AppRoutingModule
+        AppRoutingModule,
+        HttpClientModule,
     ],
     declarations: [
         AppComponent,
@@ -52,6 +53,9 @@ import { HomeStartBannerComponent } from './home/components/home-start-banner/ho
 
         // provider used to create fake backend
         fakeBackendProvider
+    ],
+    exports: [
+        HttpClientModule,
     ],
     bootstrap: [AppComponent]
 
