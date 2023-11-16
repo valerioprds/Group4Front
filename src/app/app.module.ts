@@ -22,8 +22,8 @@ import { GameShowerComponent } from './home/components/games/game-shower/game-sh
 import { StatusProgressBarComponent } from './home/components/status-progress-bar/status-progress-bar.component';
 import { WashingMachineComponent } from './home/components/washing-machine/washing-machine.component';
 
-
 @NgModule({
+
     imports: [
         BrowserModule,
         ReactiveFormsModule,
@@ -51,5 +51,6 @@ import { WashingMachineComponent } from './home/components/washing-machine/washi
         fakeBackendProvider
     ],
     bootstrap: [AppComponent]
+
 })
-export class AppModule { }
+export class AppModule {}

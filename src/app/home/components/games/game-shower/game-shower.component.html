@@ -1,12 +1,12 @@
-<p>game-shower works!</p>
-
-<div class="card">
-    <p class="heading">
-        Popular this month
-    </p>
-    <p>
-        Powered By
-    </p>
-    <p>Uiverse
-    </p>
+<div class="timer-container">
+  <h2>water used: {{waterUsed}} </h2>
+  <h2 [style.color]="timerColor">Timer: {{ time }}</h2>
+  <div class="button-group">
+    <button *ngIf="!isRunning" class="btn btn-success" (click)="startTimer()">
+      <i class="fa-solid fa-play"></i>
+    </button>
+    <button *ngIf="isRunning" class="btn btn-danger" (click)="stopTimer()">
+      <i class="fa-solid fa-stop"></i>
+    </button>
+  </div>
 </div>
