@@ -1,6 +1,6 @@
 {
     "/api": {
-    "target": "https://backend-agua.azurewebsites.net/api/v1/summary/1",
+    "target": "https://backend-agua.azurewebsites.net",
     "secure": false
     }
 }

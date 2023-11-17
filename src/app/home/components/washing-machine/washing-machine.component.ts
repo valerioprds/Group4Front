@@ -38,5 +38,10 @@ export class WashingMachineComponent {
         )
       )
       .subscribe((resp) => apiResp = resp);
+
+
+      console.log(this.apiService.getUserData())
   }
+
+  
 }
