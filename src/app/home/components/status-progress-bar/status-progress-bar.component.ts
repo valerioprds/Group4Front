@@ -33,7 +33,7 @@ export class StatusProgressBarComponent implements OnInit {
     this.apiService.userTotalWaterUsage
     .subscribe( (resp) => {
       console.log('resp',resp)
-      this.statusBar = resp
+      this.statusBar += 10
       this.statusBarString = `${this.statusBar}%`,
       this.maxValue = this.apiService.totalWaterUsage;
     })

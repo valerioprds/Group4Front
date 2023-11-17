@@ -16,6 +16,12 @@
   margin-bottom: 0;
 }
 
+
+.flush-counter-container{
+  background-color:#27292a ;
+  color: #DF608C;
+}
+
 .flush-counter-container .content h1 {
   font-size: 2.5rem;
   margin-top: 0;
@@ -44,6 +50,11 @@
   color: black;
   margin-bottom: 10px;
   transition: background-color 0.3s ease;
+}
+
+h2{
+  color:#DF608C;
+  padding-bottom: 20px;;
 }
 
 .btn-counter:hover {

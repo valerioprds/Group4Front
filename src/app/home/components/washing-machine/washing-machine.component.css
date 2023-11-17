@@ -8,6 +8,21 @@
   padding: 20px;
   width: 250px;
   height: 420px;
+  background-color: #27292a;
+}
+.card-body{
+  background-color:#27292a ;
+  color: #DF608C;
+  box-shadow: none;
+  
+}
+.card{
+  background-color:#27292a ;
+}
+
+
+h3{
+  color: #DF608C !important; 
 }
 
 .image-container img {

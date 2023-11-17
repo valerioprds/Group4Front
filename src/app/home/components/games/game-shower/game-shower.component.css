@@ -10,6 +10,23 @@
   max-width: 80px; /* Tamaño del icono */
   height: auto;
 }
+.card-body{
+  background-color:#27292a ;
+  color: #DF608C;
+
+}
+
+.card{
+  background-color:#27292a ;
+  color: #DF608C;
+  height: 400px;
+  padding: 20px;
+}
+
+h2{
+  color:#DF608C !important;
+  font-size: large;
+}
 
 .water-used, .timer {
   font-weight: 600;
